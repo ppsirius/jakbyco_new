@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+	<title><jakby_co> portfolio</title>
+  <meta charset="utf-8">
+	<meta name="author" content="Piotr Pupczyk" />
+	<meta name="keywords"  content="portfolio, freelancer, front-end developer, js, jQuery, html5, css3, ruby, rails," />
+ 
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,500,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" type="text/css" href="css/theme.css" />
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				verticalCentered: true,
+				sectionsColor: ['#fff', '#b0c736', '#000'],
+        anchors: ['about', 'portfolio', 'contact'],
+        scrollingSpeed: 1000,
+        resize : false,
+        menu: '.open-menu',
+				afterRender: function(){
+					//playing the video
+					$('video').get(0).play();
+				}
+			});
+		});
+	</script>
+  <script src="js/jquery.chaffle.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $('.contact_content a').chaffle({
+      speed: 20,
+      time: 80
+    });
+    $('#main-nav a').chaffle({
+      speed: 20,
+      time: 80
+    });
+    });
+</script>
+
+</head>
+<body>
+
+<nav class="main-nav" id="main-nav">
+  <a href="http://jakbyco.com" class="logo chaffle" data-lang="en">&lt;jakby_co&gt;</a>
+
+  <a href="#about" id="nav_about" class="chaffle" data-lang="en">About</a>
+  <a href="#portfolio" id="nav_portfolio" class="chaffle" data-lang="en">Portfolio</a>
+  <a href="#contact" id="nav_contact" class="chaffle" data-lang="en">Contact</a>
+  <a href="http://blog.jakbyco.com/" id="nav_blog" class="chaffle" data-lang="en">Blog</a>
+</nav>
+
+<div class="page-wrap">
+
+  <header class="main-header">
+    <a href="#main-nav" class="open-menu">
+      <img src="img/menu.png"></a>
+    <a href="#" class="close-menu">
+      <img src="img/cross.png"></a>
+  </header>
+  
+
+<div id="fullpage">
+
+	<div class="section" id="section0"><h3><p><span class="text1">Hi,</span><span class="text2"> I’m Piotrek,</span></p>
+  <span class="text2"><p>front - end developer & </span><span class="text3">designer.</span></p></h3><br>
+  <p class="text4">I like to learn new things and I’m focused on details.</p>
+  <p class="text5">See more in <a href="cv/cv_piotr_pupczyk.pdf" class="text6" target="_blank">CV</a></p></div>
+
+  <div class="section" id="section1">
+      <div class="slide" id="slide1">
+        <h1>Optymi</h1>
+        <p>Shop and service with mobile phones</p>
+        <a href="http://optymi.pl" target="_blank"><div class="button_round">GO!</div></a>
+      </div>
+
+      <div class="slide" id="slide2">
+        <h1>Nordic Touch</h1>
+      </div>
+
+      <div class="slide" id="slide3">
+        <h1>Karlików</h1>
+        <p>Ski Park / in progress</p>
+        <a href="http://karlikow.jakbyco.com/" target="_blank"><div class="button_round">GO!</div></a>
+      </div>
+
+      <div class="slide" id="slide4">
+        <a href="http://ss24.pl/" target="_blank"><div class="button_round">GO!</div></a>
+      </div>
+
+      <div class="slide" id="slide5">
+        <h1>Strefa Ruchu</h1>
+      </div>
+
+      <div class="slide" id="slide6">
+        <a href="http://www.nowbruk.com/" target="_blank"><div class="button_round">GO!</div></a>
+      </div>
+
+      <div class="slide" id="slide7">
+        <h1>n-Link</h1>
+        <p>Internet connections</p>
+        <a href="http://ss24.pl/" target="_blank"><div class="button_round">GO!</div></a>
+      </div>
+
+  </div>
+
+  <div class="section " id="section2">
+    <video autoplay loop muted id="myVideo">
+      <source src="video/flowers.mp4" type="video/mp4">
+      <source src="video/flowers.webm" type="video/webm">
+    </video>
+    <div class="layer">
+      <div class="container">
+        <div class="photo"><img src="img/foto.png" alt="Photo piotrek p."></div>
+        <div class="contact_content">
+          <h2>I'm looking for an internship, interested?<br>
+          Contact with me ;)</h2><br>
+          <a id="c_phone" class="chaffle" data-lang="en">+48 531 434 414</a><br>
+          <a href="mailto:piotrek@jakbyco.com" id="c_mail" class="chaffle" data-lang="en">piotrek@jakbyco.com</a><br>
+          <a href="https://github.com/ppsirius" id="c_github" class="chaffle" data-lang="en">github.com/ppsirius</a><br>
+          <a href="https://twitter.com/ppsirius" id="c_twitter" class="chaffle" data-lang="en">@ppsirius</a><br>
+          <a href="http://pl.linkedin.com/pub/piotr-pupczyk/91/82/365/" id="c_in" class="chaffle" data-lang="en">LinkedIn</a><br>
+          <a href="cv/cv_piotr_pupczyk.pdf" target="_blank" id="c_cv" class="chaffle" data-lang="en">CV</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</div>
+
+</body>
+</html>
