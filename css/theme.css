@@ -230,6 +230,13 @@ a, a:hover, a:active, a:focus {
 
 }
 
+@media all and (max-width: 900px) {
+#slide1 {
+  background-image: url(../img/Layer_min.jpg);
+
+}
+}
+
 #slide3 {
   background-image: url(../img/karlikow.jpg);
   background-repeat: no-repeat;
@@ -255,6 +262,8 @@ a, a:hover, a:active, a:focus {
 }
 
 .button_round {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
   background-color: #b0c736;
   box-shadow: 1px 2px 2px 0.00px rgba(0, 0, 0, 0.55);
@@ -266,6 +275,7 @@ a, a:hover, a:active, a:focus {
   font-weight: 400;
   padding-top: 18px;
   margin-top: 20px;
+  display: block;
 }
 
 #section1 {
