@@ -20,6 +20,15 @@
     text-align:center;
   }
 
+    /* Backgrounds will cover all the section
+  * --------------------------------------- */
+  #section0,
+  #section1,
+  #section2 {
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
   #myVideo{
     position: absolute;
     right: 0;
@@ -39,7 +48,7 @@
   * --------------------------------------- */
   #section2 .layer{
     position: absolute;
-    z-index: 2;
+    z-index: 50;
     width: 100%;
     left: 0;
     top: 30%;
@@ -57,11 +66,6 @@
 
 
 
-
-
-
-
-
 * {
   box-sizing: border-box;
 }
@@ -70,49 +74,16 @@ html, body {
   min-height: 100%;
 }
 
-a {
-  text-decoration: none;
-}
-
 a, a:hover, a:active, a:focus {
   outline: none;
+    text-decoration: none;
 }
 
-.main-header {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  transition: all 0.3s ease;
-  z-index: 20;
-}
-.main-header a {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  color: white;
-  font-size: 32px;
-  z-index: 22;
-  
+.menu-wrap {
+  padding-top: 90px;
 }
 
-.page-wrap {
-  float: right;
-  width: 100%;
-  transition: width 0.3s ease;
-  z-index: 20;
-}
-
-.main-nav {
-  position: fixed;
-  top: 0;
-  width: 0;
-  height: 100%;
-  background: #b0c736;
-  overflow-y: auto;
-  transition: width 0.3s ease;
-  z-index: 20;
-}
-.main-nav a {
+.icon-list a {
   display: block;
   background: #b0c736;
   border-bottom: 1px solid #bfd54c;
@@ -122,12 +93,16 @@ a, a:hover, a:active, a:focus {
   background-repeat: no-repeat;
   background-position: center left;
   background-position: 30px;
+
 }
-.main-nav a:hover, .main-nav a:focus {
+
+.icon-list i {
+  padding: 0 15px;
+}
+
+
+.icon-list a:hover, .icon-list a:focus {
   background: #a0b91b;
-  background-repeat: no-repeat;
-  background-position: center left;
-  background-position: 30px;
 }
 .main-nav:after {
   content: "";
@@ -167,9 +142,9 @@ a, a:hover, a:active, a:focus {
 
 
 
-.main-nav .logo {
+.icon-list .logo {
   font-weight: 100;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 
@@ -224,58 +199,31 @@ a, a:hover, a:active, a:focus {
 #slide1 {
   background-image: url(../img/Layer.jpg);
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  background-size: 100% auto;
-
 }
-
-@media all and (max-width: 900px) {
-#slide1 {
-  background-image: url(../img/Layer_min.jpg);
-
-}
-}
-
 
 #slide2 {
   background-image: url(../img/nordictouch.jpg);
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  background-size: 100% auto;
 }
 
 #slide3 {
   background-image: url(../img/karlikow.jpg);
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  background-size: 100% auto;
 }
 
 #slide4 {
   background-image: url(../img/ss24.jpg);
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  background-size: 100% auto;
 }
 
 #slide6 {
   background-image: url(../img/nowbruk.jpg);
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  background-size: 100% auto;
 }
 
 #slide7 {
   background-image: url(../img/nlink.jpg);
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  background-size: 100% auto;
 }
 
 .button_round {
@@ -294,11 +242,6 @@ a, a:hover, a:active, a:focus {
   margin-top: 20px;
   display: block;
 }
-
-#section1 {
-
-}
-
 
 #section1 h1 {
   color: #2b2e34;
@@ -331,13 +274,11 @@ a, a:hover, a:active, a:focus {
 
 .photo {
   width: 102px;
-  float: left;
+  margin: 0 auto;
 }
 
 .contact_content {
-  float: left;
-  margin-left: 30px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .contact_content a {
@@ -345,14 +286,12 @@ a, a:hover, a:active, a:focus {
   line-height: 34px;
   color: #fff;
   background-repeat: no-repeat;
-  padding-left: 50px;
+  padding-left: 20px;
   height: 30px;
 }
 
-.contact_content a:hover {
-  color: #b0c736;
-  font-weight: 500;
-  font-style: 
+.contact_content h2 {
+  margin-bottom: 10px;
 }
 
 #c_phone {
@@ -385,3 +324,13 @@ a, a:hover, a:active, a:focus {
   background-position: 0 3px;
 }
 
+.opacity {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}

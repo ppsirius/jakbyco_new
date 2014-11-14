@@ -69,6 +69,7 @@ html, body {
     height: 64px;
     margin-top: -38px;
     background-repeat:no-repeat;
+    opacity: 0.4;
 }
 .fp-controlArrow.fp-prev {
     left: 15px;

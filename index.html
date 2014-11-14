@@ -4,11 +4,14 @@
   <meta charset="utf-8">
 	<meta name="author" content="Piotr Pupczyk" />
 	<meta name="keywords"  content="portfolio, freelancer, front-end developer, js, jQuery, html5, css3, ruby, rails," />
- 
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+ 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
   <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,500,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-   <link rel="stylesheet" type="text/css" href="css/theme.css" />
+  <link rel="stylesheet" type="text/css" href="css/theme.css" />
+  <link rel="stylesheet" type="text/css" href="css/examples.css" />
+  <link rel="stylesheet" type="text/css" href="css/menu_sideslide.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
 	<!--[if IE]>
 		<script type="text/javascript">
 			 var console = { log: function() {} };
@@ -18,6 +21,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 	<script type="text/javascript" src="js/examples.js"></script>
+  <script src="js/jquery.chaffle.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
@@ -26,53 +30,56 @@
         anchors: ['about', 'portfolio', 'contact'],
         scrollingSpeed: 1000,
         resize : false,
+
         menu: '.open-menu',
 				afterRender: function(){
 					//playing the video
 					$('video').get(0).play();
 				}
 			});
+
+    // chaffle effect
+
+      $('.icon-list span').chaffle({
+        speed: 20,
+        time: 80
+      });
+      $('.contact_content a').chaffle({
+        speed: 20,
+        time: 80
+      });
+      $('.logo').chaffle({
+        speed: 20,
+        time: 80
+      });
+
 		});
 	</script>
-  <script src="js/jquery.chaffle.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-    $('.contact_content a').chaffle({
-      speed: 20,
-      time: 80
-    });
-    $('#main-nav a').chaffle({
-      speed: 20,
-      time: 80
-    });
-    });
-</script>
-
 </head>
 <body>
 
-<nav class="main-nav" id="main-nav">
-  <a href="http://jakbyco.com" class="logo chaffle" data-lang="en">&lt;jakby_co&gt;</a>
+<div class="container">
+      <div class="menu-wrap">
+        <nav class="menu">
+          <div class="icon-list">
+            <a href="http://jakbyco.com" class="logo chaffle" data-lang="en">&lt;jakby_co&gt;</a>
+            <a href="#about"><i class="fa fa-fw fa-star-o"></i><span class="chaffle" data-lang="en">About</span></a>
+            <a href="#portfolio"><i class="fa fa-fw fa-code"></i><span class="chaffle" data-lang="en">Portfolio</span></a>
+            <a href="#contact"><i class="fa fa-fw fa-envelope-o"></i><span class="chaffle" data-lang="en">Contact</span></a>
+            <a href="http://blog.jakbyco.com/" target="_blank"><i class="fa fa-fw fa-comment-o"></i><span class="chaffle" data-lang="en">Blog</span></a>
 
-  <a href="#about" id="nav_about" class="chaffle" data-lang="en">About</a>
-  <a href="#portfolio" id="nav_portfolio" class="chaffle" data-lang="en">Portfolio</a>
-  <a href="#contact" id="nav_contact" class="chaffle" data-lang="en">Contact</a>
-  <a href="http://blog.jakbyco.com/" id="nav_blog" class="chaffle" data-lang="en">Blog</a>
-</nav>
-
-<div class="page-wrap">
-
-  <header class="main-header">
-    <a href="#main-nav" class="open-menu">
-      <img src="img/menu.png"></a>
-    <a href="#" class="close-menu">
-      <img src="img/cross.png"></a>
-  </header>
-  
+          </div>
+        </nav>
+        <button class="close-button" id="close-button">Close Menu</button>
+      </div>
+      <button class="menu-button" id="open-button">Open Menu</button>
+        <div class="content-wrap">
+      
+ 
 
 <div id="fullpage">
 
-	<div class="section" id="section0"><h3><p><span class="text1">Hi,</span><span class="text2"> I’m Piotrek,</span></p>
+  <div class="section" id="section0"><h3><p><span class="text1">Hi,</span><span class="text2"> I’m Piotrek,</span></p>
   <span class="text2"><p>front - end developer & </span><span class="text3">designer.</span></p></h3><br>
   <p class="text4">I like to learn new things and I’m focused on details.</p>
   <p class="text5">See more in <a href="cv/cv_piotr_pupczyk.pdf" class="text6" target="_blank">CV</a></p></div>
@@ -104,38 +111,42 @@
 
       <div class="slide" id="slide7">
         <h1>n-Link</h1>
-        <p>Internet connections</p>
         <a href="http://nlink.jakbyco.com/" target="_blank" class="button_round">GO!</a>
       </div>
 
   </div>
 
   <div class="section " id="section2">
+    <div class="opacity"></div>
     <video autoplay loop muted id="myVideo">
       <source src="video/bg_contact.mp4" type="video/mp4">
       <source src="video/bg_contact.webm" type="video/webm">
     </video>
+
     <div class="layer">
-      <div class="container">
+      <div class="center">
         <div class="photo"><img src="img/foto.png" alt="Photo piotrek p."></div>
         <div class="contact_content">
           <h2>I'm looking for an internship, interested?<br>
-          Contact with me ;)</h2><br>
-          <a id="c_phone" class="chaffle" data-lang="en">+48 531 434 414</a><br>
-          <a href="mailto:piotrek@jakbyco.com" id="c_mail" class="chaffle" data-lang="en">piotrek@jakbyco.com</a><br>
-          <a href="https://github.com/ppsirius" id="c_github" class="chaffle" data-lang="en">github.com/ppsirius</a><br>
-          <a href="https://twitter.com/ppsirius" id="c_twitter" class="chaffle" data-lang="en">@ppsirius</a><br>
-          <a href="http://pl.linkedin.com/pub/piotr-pupczyk/91/82/365/" id="c_in" class="chaffle" data-lang="en">LinkedIn</a><br>
-          <a href="cv/cv_piotr_pupczyk.pdf" target="_blank" id="c_cv" class="chaffle" data-lang="en">CV</a>
+          Contact with me ;)</h2>
+          <i class="fa fa-phone"></i><a class="chaffle" data-lang="en">+48 531 434 414</a><br>
+          <i class="fa fa-envelope"></i><a href="mailto:piotrek@jakbyco.com" class="chaffle" data-lang="en">piotrek@jakbyco.com</a><br>
+          <i class="fa fa-github"></i><a href="https://github.com/ppsirius" class="chaffle" data-lang="en">github.com/ppsirius</a><br>
+          <i class="fa fa-twitter"></i><a href="https://twitter.com/ppsirius" class="chaffle" data-lang="en">@ppsirius</a><br>
+          <i class="fa fa-linkedin"></i><a href="http://pl.linkedin.com/pub/piotr-pupczyk/91/82/365/" class="chaffle" data-lang="en">LinkedIn</a><br>
+          <i class="fa fa-file-text"></i><a href="cv/cv_piotr_pupczyk.pdf" target="_blank" class="chaffle" data-lang="en">CV</a>
         </div>
-
       </div>
     </div>
-
+    </div>
   </div>
-
-</div>
 </div>
 
+    </div>
+  </div><!-- /content-wrap -->
+</div><!-- /container -->
+
+    <script src="js/classie.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
