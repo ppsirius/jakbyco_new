@@ -1,8 +1,99 @@
 
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+  text-decoration:none;
+}
+table {
+    border-spacing: 0;    
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+  font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:200,400,700,800);
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'codropsicons';
+  src:url('../fonts/codropsicons/codropsicons.eot');
+  src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+    url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+    url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+/* Custom CSS
+ * --------------------------------------- */
+
+
+h1{
+  font-size: 6em; 
+}
+p{
+  font-size: 2em;
+}
+.intro p{
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+.section{
+  text-align:center;
+}
+
+
+
   body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    min-height: 100%;
   }
+
+  * {
+  box-sizing: border-box;
+  }
+
+
+  a, a:hover, a:active, a:focus {
+    outline: none;
+      text-decoration: none;
+  }
+
   /* Style for our header texts
   * --------------------------------------- */
   h1{
@@ -39,10 +130,7 @@
     height: auto;
     z-index: 0;
     background: url(../img/bg_contact.jpg) no-repeat; /* img bg for mobile */
-
   }
-
-
 
   /* Layer with position absolute in order to have it over the video
   * --------------------------------------- */
@@ -55,29 +143,6 @@
     height: 100%;
   }
 
-
-
-  /* Bottom menu
-  * --------------------------------------- */
-  #infoMenu li a {
-    color: #fff;
-  }
-
-
-
-
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  min-height: 100%;
-}
-
-a, a:hover, a:active, a:focus {
-  outline: none;
-    text-decoration: none;
-}
 
 .menu-wrap {
   padding-top: 90px;
@@ -93,82 +158,20 @@ a, a:hover, a:active, a:focus {
   background-repeat: no-repeat;
   background-position: center left;
   background-position: 30px;
-
 }
 
 .icon-list i {
   padding: 0 15px;
 }
 
-
 .icon-list a:hover, .icon-list a:focus {
   background: #a0b91b;
 }
-.main-nav:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 34px;
-}
-
-.content {
-  padding: 100px 20px 20px 20px;
-}
-
-.close-menu {
-  display: none;
-}
-
-#main-nav:target {
-  width: 25%;
-}
-
-#main-nav:target + .page-wrap {
-  width: 75%;
-}
-#main-nav:target + .page-wrap .open-menu {
-  display: none;
-}
-#main-nav:target + .page-wrap .close-menu {
-  display: block;
-}
-#main-nav:target + .page-wrap .main-header {
-  width: 75%;
-  left: 25%;
-}
-
-
-
 
 .icon-list .logo {
   font-weight: 100;
   font-size: 2em;
 }
-
-
-.main-nav .logo  {
-  padding: 25px;
-  height: 130px;
-}
-
-#nav_about {
-  background-image: url("../img/about.png");
-}
-
-#nav_portfolio {
-  background-image: url("../img/portfolio.png");
-}
-
-#nav_contact {
-  background-image: url("../img/gmail.png");
-}
-
-#nav_blog {
-  background-image: url("../img/blog.png");
-}
-
 
 #section0 {
   text-align: left;
@@ -196,34 +199,32 @@ a, a:hover, a:active, a:focus {
   font-weight: 400;
 }
 
+#slide1, #slide2, #slide3, #slide4, #slide5, #slide6, #slide7 {
+  background-repeat: no-repeat;
+}
+
 #slide1 {
   background-image: url(../img/Layer.jpg);
-  background-repeat: no-repeat;
 }
 
 #slide2 {
   background-image: url(../img/nordictouch.jpg);
-  background-repeat: no-repeat;
 }
 
 #slide3 {
   background-image: url(../img/karlikow.jpg);
-  background-repeat: no-repeat;
 }
 
 #slide4 {
   background-image: url(../img/ss24.jpg);
-  background-repeat: no-repeat;
 }
 
 #slide6 {
   background-image: url(../img/nowbruk.jpg);
-  background-repeat: no-repeat;
 }
 
 #slide7 {
   background-image: url(../img/nlink.jpg);
-  background-repeat: no-repeat;
 }
 
 .button_round {
@@ -292,36 +293,6 @@ a, a:hover, a:active, a:focus {
 
 .contact_content h2 {
   margin-bottom: 10px;
-}
-
-#c_phone {
-  background-image: url("../img/phone.png");
-  background-position: 0 2px;
-}
-
-#c_mail {
-  background-image: url("../img/gmail.png");
-  background-position: 0 5px;
-}
-
-#c_github {
-  background-image: url("../img/github.png");
-  background-position: 0 3px;
-}
-
-#c_twitter {
-  background-image: url("../img/twitter.png");
-  background-position: 0 3px;
-}
-
-#c_in {
-  background-image: url("../img/linkedin.png");
-  background-position: 0 3px;
-}
-
-#c_cv {
-  background-image: url("../img/cv.png");
-  background-position: 0 3px;
 }
 
 .opacity {
