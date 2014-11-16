@@ -66,6 +66,7 @@ h1{
 }
 p{
   font-size: 2em;
+  color: #444;
 }
 .intro p{
   width: 50%;
@@ -113,11 +114,16 @@ p{
 
     /* Backgrounds will cover all the section
   * --------------------------------------- */
-  #section0,
   #section1,
   #section2 {
     background-size: cover;
     background-attachment: fixed;
+  }
+
+  #section0 {
+    background-image: url(../img/photo.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom; 
   }
 
   #myVideo{
@@ -175,7 +181,7 @@ p{
 
 #section0 {
   text-align: left;
-  margin: 0 10%;
+  margin-left: 10%;
 }
 
 .text1 {
@@ -201,6 +207,7 @@ p{
 
 #slide1, #slide2, #slide3, #slide4, #slide5, #slide6, #slide7 {
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #slide1 {
